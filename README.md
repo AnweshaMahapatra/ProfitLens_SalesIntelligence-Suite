@@ -97,14 +97,18 @@ https://app.powerbi.com/groups/me/reports/8bb233b9-6239-4800-901f-b22a7d6488e8/R
 
 ### 📊 Key Insights
 
+<img width="796" height="447" alt="key insights" src="https://github.com/user-attachments/assets/5771985e-7b29-4327-b3dd-597c947b013b" />
+
 * Revenue & Sales Quantity Overview
 * Revenue Trend Analysis (2018–2020)
 * Revenue by Market
 * Revenue by Customer
 * Revenue by Product
 * Customer Type Split (Brick & Mortar vs E-Commerce)
+  
+### 💰Profit Analysis
 
-### 💰 Profit Analysis
+<img width="790" height="442" alt="Profit Analysis" src="https://github.com/user-attachments/assets/ab169f03-bfab-404f-8ae2-75afb8b8738e" />
 
 * Revenue Contribution vs Profit Contribution
 * Profit Margin % by Market
@@ -113,6 +117,8 @@ https://app.powerbi.com/groups/me/reports/8bb233b9-6239-4800-901f-b22a7d6488e8/R
 * Margin Efficiency Analysis
 
 ### 📉 Performance Analysis
+
+<img width="694" height="462" alt="Performance Analysis" src="https://github.com/user-attachments/assets/bb95b435-0769-4eae-bd24-0654c52e868c" />
 
 * Revenue vs Revenue LY Trend
 * Dynamic Profit Target Analysis

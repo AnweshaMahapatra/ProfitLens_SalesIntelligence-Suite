@@ -1,11 +1,11 @@
 # Steps Followed
-## Building the Sales Insight Power BI Dashboard — End to End
+## Building the Sales Insight Power BI Dashboard End to End
 
 ---
 
 ## Step 1: SQL Data Analysis & Initial Exploration
 
-Before loading anything into Power BI, SQL was used to understand the raw data — its structure, volume, and key relationships. This is a critical step that most analysts skip, and it directly shaped what transformations were needed later.
+Before loading anything into Power BI, SQL was used to understand the raw data's structure, volume, and key relationships. This is a critical step that most analysts skip, and it directly shaped what transformations were needed later.
 
 **Reading the data**
 
@@ -14,7 +14,7 @@ SELECT * FROM customers;
 SELECT * FROM products;
 ```
 
-These baseline queries confirmed the structure of the dimension tables — customer names, codes, types (Brick & Mortar vs E-Commerce), and product identifiers — before any joins were attempted.
+These baseline queries confirmed the structure of the dimension tables: customer names, codes, types (Brick & Mortar vs E-Commerce), and product identifiers before any joins were attempted.
 
 **Counting records**
 
@@ -22,7 +22,7 @@ These baseline queries confirmed the structure of the dimension tables — custo
 SELECT COUNT(*) FROM transactions;
 ```
 
-Established the total number of transaction records in the dataset. This acts as a control figure — after cleaning in Power Query, the final row count was compared against this to confirm no unintended data loss.
+Established the total number of transaction records in the dataset. This acts as a control figure after cleaning in Power Query; the final row count was compared against this to confirm no unintended data loss.
 
 **Filtering transactions by market**
 
@@ -32,7 +32,8 @@ FROM transactions
 WHERE market_code = 'Mark001';
 ```
 
-Identified which products were active in a specific market (Mark001 = Delhi NCR). This query revealed the product mix per region and flagged that a significant volume of transactions had blank/null product codes — a data quality issue that was later tracked and surfaced on the dashboard as the "(Blank)" product category.
+Identified which products were active in a specific market (Mark001 = Delhi NCR). 
+This query revealed the product mix per region and flagged that a significant volume of transactions had blank/null product codes. This data quality issue was later tracked and surfaced on the dashboard as the "(Blank)" product category.
 
 **Joining transactions with the date dimension for year-level filtering**
 
@@ -43,7 +44,9 @@ INNER JOIN date ON transactions.order_date = date.date
 WHERE date.year = 2020;
 ```
 
-This join was essential for building the time-intelligence foundation. The date dimension table enables year and month-level slicing in Power BI — without it, the year/month filter buttons on every dashboard page would not function.
+This join was essential for building the time-intelligence foundation. 
+The date dimension table enables year and month-level slicing in Power BI; without it, 
+the year/month filter buttons on every dashboard page would not function.
 
 **Total revenue for a specific year**
 
@@ -67,7 +70,9 @@ WHERE date.year = 2020
   AND transactions.market_code = 'Mark001';
 ```
 
-This granular query — filtering by year, month, and market simultaneously — confirmed that the data model could support multi-dimensional filtering before replicating the same logic in Power BI. It also validated the Delhi NCR January 2020 revenue figure used in the Performance Analysis trend.
+This granular query filtering by year, month, and market simultaneously confirmed that the data model could support
+multi-dimensional filtering before replicating the same logic in Power BI.
+It also validated the Delhi NCR January 2020 revenue figure used in the Performance Analysis trend.
 
 ---
 
@@ -95,7 +100,10 @@ Filtered out rows with null or zero sales amounts, test records, and any entries
 The dataset contained transactions coded to markets outside the intended scope. Filters were applied to retain only the 14 active Indian markets visible in the final dashboard.
 
 **Standardised currency values**
-The `sales_amount` field contained values in mixed formats — some records stored amounts in USD (from international transactions) and others in INR. A conditional column (`new_sales_amount`) was created to convert all values to INR, ensuring every financial calculation in the dashboard operates on a consistent currency basis. This is why the Revenue measure references `new_sales_amount` rather than the raw `sales_amount` field.
+The `sales_amount` field contained values in mixed formats.
+Some records store amounts in USD (from international transactions) and others in INR.
+A conditional column (`new_sales_amount`) was created to convert all values to INR, ensuring every financial calculation in the dashboard operates on a consistent currency basis. 
+This is why the Revenue measure references `new_sales_amount` rather than the raw `sales_amount` field.
 
 **Validated data types**
 Confirmed that date fields were recognised as Date type (not text), numeric fields were set to Decimal or Whole Number, and text fields like market names and customer names were trimmed of leading/trailing spaces.
@@ -130,7 +138,8 @@ Sums the pre-calculated profit margin field from the transactions table. This fi
 ```dax
 Profit Margin % = DIVIDE([Total Profit Margin], [Revenue], 0)
 ```
-Calculates margin as a percentage of revenue. The `0` in `DIVIDE()` returns zero instead of an error when revenue is null — critical for markets like Bengaluru where the result is negative but must still render.
+Calculates margin as a percentage of revenue. The `0` in `DIVIDE()` returns zero instead of an error when revenue is 
+null critical for markets like Bengaluru, where the result is negative, but must still render.
 
 ---
 
@@ -141,7 +150,8 @@ DIVIDE(
     CALCULATE([Revenue], ALL('sales products'), ALL('sales customers'), ALL('sales markets'))
 )
 ```
-Calculates each market's or customer's share of total revenue. `ALL()` removes the current filter context from the three dimension tables so the denominator always reflects the full dataset total — regardless of which market or customer is selected in a slicer.
+Calculates each market's or customer's share of total revenue. 
+`ALL()` removes the current filter context from the three-dimensional tables, so the denominator always reflects the full dataset total, regardless of which market or customer is selected in a slicer.
 
 ---
 
@@ -152,41 +162,57 @@ DIVIDE(
     CALCULATE([Total Profit Margin], ALL('sales products'), ALL('sales customers'), ALL('sales markets'))
 )
 ```
-Same logic as Revenue Contribution % but applied to profit margin. This is what powers the "Profit Margin Contribution % by markets_name" column — the measure that revealed Delhi NCR contributes 48.5% of profit despite running at only 2.3% margin.
+Same logic as Revenue Contribution %, but applied to profit margin. 
+This is what powers the "Profit Margin Contribution % by markets_name" column, the measure that revealed Delhi NCR contributes 48.5% of profit despite running at only 2.3% margin.
 
 ---
 
 ```dax
 Revenue LY = CALCULATE([Revenue], SAMEPERIODLASTYEAR('sales date'[date]))
 ```
-Prior year revenue for the same period. Uses `SAMEPERIODLASTYEAR()` from the date dimension to shift the filter context back exactly one year. This drives the "Revenue LY" overlay line in the Performance Analysis trend chart — making year-on-year deterioration visible month by month in 2020.
+Prior year revenue for the same period. Uses `SAMEPERIODLASTYEAR()` 
+from the date dimension to shift the filter context back exactly one year. 
+This drives the "Revenue LY" overlay line in the Performance Analysis trend chart,
+making year-on-year deterioration visible month by month in 2020.
 
 ---
 
 ```dax
 Target Diff = [Profit Margin %] - 'Profit Target'[Profit Target Value]
 ```
-Calculates the gap between actual profit margin % and the user-defined target (default: 2%). Negative values indicate markets or customers below target. This measure connects to the What-If parameter on the Performance Analysis page, making the profit target threshold dynamic and adjustable.
+Calculates the gap between actual profit margin % and the user-defined target (default: 2%). 
+Negative values indicate markets or customers below the target. 
+This measure connects to the What If parameter on the Performance Analysis page, 
+making the profit target threshold dynamic and adjustable.
 
 ---
 
 ## Step 5: Report Pages Built
 
 **Page 1 — Key Insights**
-A high-level operational overview. Displays total revenue (₹985M), sales quantity (2M), revenue and quantity rankings by market, revenue trend from 2018–2020, customer type split (Brick & Mortar vs E-Commerce), top customers by revenue, and top product codes. Designed for quick scanning by any stakeholder.
+A high-level operational overview. Displays total revenue (₹985M), sales quantity (2M), 
+revenue and quantity rankings by market, revenue trend from 2018–2020, customer type split (Brick & Mortar vs E-Commerce), 
+top customers by revenue, and top product codes. Designed for quick scanning by any stakeholder.
 
 **Page 2 — Profit Analysis**
-The financial diagnostic layer. Shows three parallel market rankings — Revenue Contribution %, Profit Margin Contribution %, and Profit Margin % — side by side so the inversion between revenue size and margin efficiency is immediately visible. Includes the full customer profitability table with all four metrics per account. Total Profit Margin KPI card (₹24.7M) added as a third headline figure alongside Revenue and Sales Qty.
+The financial diagnostic layer. Shows three parallel market rankings.
+Revenue Contribution %, Profit Margin Contribution %, and Profit Margin % side by side so the inversion between revenue size and margin efficiency is immediately visible. 
+Includes the full customer profitability table with all four metrics per account. 
+Total Profit Margin KPI card (₹24.7M) added as a third headline figure alongside Revenue and Sales Qty.
 
 **Page 3 — Performance Analysis**
-A time-filtered diagnostic for 2020. Includes a dynamic Profit Target parameter (default 2%), a combined trend chart overlaying current revenue, prior year revenue, and profit margin %, and a 2020-specific customer profitability table. Designed to answer: which markets and customers are above or below the minimum viability threshold right now?
+A time-filtered diagnostic for 2020. Includes a dynamic Profit Target parameter (default 2%), 
+a combined trend chart overlaying current revenue, prior year revenue, 
+and profit margin %, and a 2020-specific customer profitability table. 
+Designed to answer: which markets and customers are above or below the minimum viability threshold right now?
 
 ---
 
 ## Insights Gained
 
-- Learned how to validate data at the SQL layer before loading into Power BI — catching currency inconsistencies and null product codes early prevented downstream errors in every measure
-- Understood how `ALL()` in DAX unlocks contribution % calculations by intentionally ignoring filter context
-- Saw firsthand how `SAMEPERIODLASTYEAR()` requires a properly structured date dimension table — without it, the Revenue LY measure returns blank
-- Recognised that the most impactful dashboard insight (Bengaluru's –20.8% margin) only became visible because three separate measures were placed side by side — no single measure tells that story alone
-- Appreciated that data cleaning decisions (like creating `new_sales_amount` for currency standardisation) are not cosmetic — they directly determine whether the ₹985M headline figure is accurate or misleading
+Learned how to validate data at the SQL layer before loading into Power BI, catching currency inconsistencies and null product codes early prevented downstream errors in every measure
+Understood how `ALL()` in DAX unlocks contribution % calculations by intentionally ignoring filter context
+Saw firsthand how `SAMEPERIODLASTYEAR()` requires a properly structured date dimension table; without it, the Revenue LY measure returns blank
+Recognised that the most impactful dashboard insight (Bengaluru's –20.8% margin) only became visible because three separate measures were placed side by side, no single measure tells that story alone
+Appreciated that data cleaning decisions (like creating `new_sales_amount` for currency standardisation) are not cosmetic.
+They directly determine whether the ₹985M headline figure is accurate or misleading

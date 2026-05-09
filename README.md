@@ -8,7 +8,7 @@
 
 This project delivers a business intelligence solution built using **Power BI, SQL, Power Query, and DAX**, analysing over **₹985M in revenue**, **2M+ sales quantity**, **14 Indian markets**, and **25+ customers** across a **3-year sales timeline (2017–2020)**.
 
-The dashboard was designed not just to track revenue — but to answer deeper business questions:
+The dashboard was designed not just to track revenue, but to answer deeper business questions:
 
 * Which markets actually generate profit?
 * Which customers drive revenue but reduce margin quality?
@@ -39,7 +39,7 @@ Although revenue remained strong on paper, leadership lacked visibility into:
 * declining revenue trends,
 * and operational inefficiencies hidden inside aggregate reports.
 
-The data existed across transactional systems and spreadsheets — but there was no unified intelligence layer capable of transforming raw sales data into actionable business insights.
+The data existed across transactional systems and spreadsheets, but there was no unified intelligence layer capable of transforming raw sales data into actionable business insights.
 
 This project was built to solve that problem.
 
@@ -86,6 +86,12 @@ This project was built to solve that problem.
 | 📉 Performance Analysis | 2020 business decline analysis, target monitoring, loss-maker detection |
 
 ---
+
+
+# Dashboard Link
+
+https://app.powerbi.com/groups/me/reports/8bb233b9-6239-4800-901f-b22a7d6488e8/ReportSection738a2a4bc71dc399c00c?experience=power-bi
+
 
 # 🔍 Dashboard Capabilities
 

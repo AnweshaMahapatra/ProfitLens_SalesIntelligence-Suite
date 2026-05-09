@@ -210,9 +210,12 @@ Designed to answer: which markets and customers are above or below the minimum v
 
 ## Insights Gained
 
-Learned how to validate data at the SQL layer before loading into Power BI, catching currency inconsistencies and null product codes early prevented downstream errors in every measure
-Understood how `ALL()` in DAX unlocks contribution % calculations by intentionally ignoring filter context
+1. Learned how to validate data at the SQL layer before loading into Power BI, catching currency inconsistencies and null product codes early prevented downstream errors in every measure.
+
+2. Understood how `ALL()` in DAX unlocks contribution % calculations by intentionally ignoring filter context
 Saw firsthand how `SAMEPERIODLASTYEAR()` requires a properly structured date dimension table; without it, the Revenue LY measure returns blank
-Recognised that the most impactful dashboard insight (Bengaluru's –20.8% margin) only became visible because three separate measures were placed side by side, no single measure tells that story alone
-Appreciated that data cleaning decisions (like creating `new_sales_amount` for currency standardisation) are not cosmetic.
-They directly determine whether the ₹985M headline figure is accurate or misleading
+
+3. Recognised that the most impactful dashboard insight (Bengaluru's –20.8% margin) only became visible because three separate    measures were placed side by side; no single measure tells that story alone.
+   
+4. Appreciated that data cleaning decisions (like creating `new_sales_amount` for currency standardisation) are not cosmetic.
+ They directly determine whether the ₹985M headline figure is accurate or misleading

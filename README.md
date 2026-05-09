@@ -1,4 +1,4 @@
-# 📊 Sales Insight: Revenue, Profit & Performance Intelligence Dashboard
+# 📊 Revenue, Profit & Performance Intelligence Dashboard
 
 > *A premium multi-page Power BI solution built to uncover hidden profitability gaps, customer dependency risks, and revenue decline patterns across a large-scale sales network in India.*
 
@@ -48,11 +48,17 @@ This project was built to solve that problem.
 # 🎯 Project Objectives
 
 ✔ Identify high-revenue but low-profit markets
+
 ✔ Detect customer concentration risks
+
 ✔ Analyse declining revenue trends from 2018–2020
+
 ✔ Compare Revenue vs Profit Contribution by market
+
 ✔ Identify loss-making customers and regions
+
 ✔ Evaluate Brick & Mortar vs E-Commerce performance
+
 ✔ Build dynamic profitability tracking for leadership teams
 
 ---
@@ -158,21 +164,15 @@ sales-insight-powerbi/
 │
 ├── README.md
 ├── Steps_Followed.md
-├── SQL_and_DAX_Reference.md
-├── The Story Behind the Dashboard.md
-├── Business_Questions_and_Insights.md
+├── SQL and DAX reference.md
+├── Story behind the dashboard.md
+├── Business_Insights.md
 │
 ├── dashboard/
-│   └── Sales_Insight_Report.pbix
-│
-├── data/
-│   ├── sales_transactions.csv
-│   ├── markets.csv
-│   ├── customers.csv
-│   └── products.csv
-│
+│   └── Sales insight project report.pbix
+
 └── exports/
-    └── Sales_Insight_Project_Report.pdf
+    └── Sales insight project report.pdf
 ```
 
 ---
@@ -184,7 +184,7 @@ sales-insight-powerbi/
 | `Steps_Followed.md`                  | End-to-end technical workflow from SQL to Power BI      |
 | `SQL_and_DAX_Reference.md`           | SQL queries and DAX measures with business explanations |
 | `The Story Behind the Dashboard.md`  | Executive storytelling & business narrative             |
-| `Business_Questions_and_Insights.md` | Strategic stakeholder-level business analysis           |
+| `Business_Questions_and_Insights.md` | Strategic stakeholder level business analysis           |
 
 ---
 
@@ -203,7 +203,7 @@ The dashboard transformed disconnected transactional data into:
 
 * strategic visibility,
 * profitability intelligence,
-* and data-driven decision-making.
+* and data driven decision making.
 
 This is not just a reporting dashboard.
 
@@ -216,9 +216,9 @@ It is a business diagnostic system.
 **Anwesha Mahapatra**
 Data Analyst | Power BI Developer | Business Intelligence Enthusiast
 
-* 💼 LinkedIn: *Add your LinkedIn link*
-* 💻 GitHub: *Add your GitHub profile*
-* 📧 Email: *Add your email*
+* 💼 LinkedIn: *https://www.linkedin.com/in/anweshamahapatra-dataanalyst/*
+* 💻 GitHub: *https://github.com/AnweshaMahapatra*
+* 📧 Email: *anweshamahapatra@8888gmail.com*
 
 ---
 

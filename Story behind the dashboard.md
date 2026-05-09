@@ -1,368 +1,157 @@
-# The Story Behind the Dashboard
+# 🌍 The Story Behind the Dashboard
 
-## *A Sales Intelligence Consulting Case Study*
-
----
-
-# 📖 Prologue: When Revenue Hides the Truth
-
-There is a particular kind of business problem that never appears on the balance sheet — the problem of **not knowing**.
-
-A company can generate nearly **₹985 million** in annual revenue, sell across fourteen cities, manage dozens of customers, and still have no clear understanding of *where it is truly making money*.
-
-On paper, the business looked successful:
-
-* **₹985M Revenue**
-* **2M Units Sold**
-* Presence across major Indian markets
-
-These numbers were celebrated in meetings and performance reviews.
-
-But numbers alone can create an illusion of success.
-
-The real questions were deeper:
-
-* Which markets are genuinely profitable?
-* Which customers drive value versus just volume?
-* Is revenue growth sustainable?
-* Are margins silently deteriorating?
-
-The organization had data.
-What it lacked was visibility.
-
-This dashboard was built to bridge that gap.
+### *Where Revenue Looked Strong — But the Business Was Quietly Struggling Beneath the Surface*
 
 ---
 
-# 🧩 Chapter 1: The Business Problem
+## 💬 "We're doing well. Revenue is almost a billion."
 
-The organization operates across **14 major Indian markets**, ranging from:
+That was the opening line of the quarterly review.
 
-* Delhi NCR
-* Mumbai
-* Ahmedabad
-* Bengaluru
-* Hyderabad
-* Bhubaneshwar
+And on paper, it was true. Nearly **₹985 million** in revenue. **2 million units** moving through the network. Fourteen cities. Dozens of customers. A sales team spread across the length and breadth of India, each region filing its numbers, each manager confident in their patch.
 
-Sales operations were spread across multiple regions, customers, and retail channels.
+Nobody was lying. The revenue was real.
 
-As the business expanded, reporting complexity increased:
-
-* Revenue tracking existed
-* Sales reporting existed
-* Customer data existed
-
-But none of these systems communicated effectively with each other.
-
-Finance teams could generate reports.
-Regional teams could monitor sales.
-
-Yet leadership still struggled to answer critical business questions:
-
-### ❓ Key Strategic Questions
-
-1. Which markets deserve future investment?
-2. Which customers are profitable versus simply high-volume?
-3. Is the business becoming more efficient or less efficient over time?
-4. Which regions are silently eroding profitability?
-5. Are existing sales channels still sustainable?
-
-No single reporting system could answer all of these dynamically.
-
-That reporting gap became the foundation of this project.
+But nobody was asking the harder question either.
 
 ---
 
-# 📊 Chapter 2: What the Data Revealed
+# 🔍 The Question Nobody Was Asking
 
-## 💰 The Revenue Concentration Problem
+In most organisations, revenue becomes the proxy for health. When the top line looks good, the meeting ends early. The slides get filed. The next quarter's targets get set slightly higher.
 
-The first major insight was concentration risk.
+What doesn't happen — what almost never happens unless someone forces it — is the follow-up question:
 
-### Delhi NCR alone contributes:
+> *Of that ₹985 million, how much did we actually keep?*
 
-* **₹520M Revenue**
-* **52.76% of total business revenue**
+The answer, when it finally surfaced, was **₹24.7 million**.
 
-Even more concerning:
+That is a **2.5% net margin** on a billion-rupee operation. For every hundred rupees that came in the door, the business held onto two rupees and fifty paise. The other ninety-seven and a half went somewhere — to logistics, to pricing concessions, to markets that cost more to serve than they returned, to a customer relationship so large and so entrenched that nobody had thought to question its terms in years.
 
-The top three markets:
-
-* Delhi NCR
-* Mumbai
-* Ahmedabad
-
-together contribute:
-
-# ⚠️ 81.4% of total revenue
-
-The remaining eleven markets collectively contribute less than 19%.
-
-This creates a dangerous business dependency.
-
-If Delhi NCR experiences:
-
-* demand decline,
-* customer loss,
-* operational disruption,
-* or competitive pressure,
-
-the entire business becomes vulnerable.
-
-The quantity analysis reinforced the same pattern:
-
-* Delhi NCR sold **0.99M units**
-* Mumbai sold only **0.38M units**
-
-The organization was heavily dependent on a single market.
+This is the story of how that number came to light — and what it meant.
 
 ---
 
-# 📉 The Profitability Inversion
+# 📉 The City That Was Bleeding Money
 
-The second discovery was even more alarming.
+Somewhere in the southern edge of the network, a city was quietly destroying value.
 
-Despite generating **₹985M in revenue**, total profit margin stood at only:
+Not dramatically. Not in a way that showed up in any single report. Just consistently, month after month, racking up transactions that cost more to fulfil than they earned.
 
-# ⚠️ ₹24.7M (~2.5%)
+That city was **Bengaluru**.
 
-But the real insight emerged when markets were ranked by profitability instead of revenue.
+## ⚠️ Profit Margin: **–20.8%**
 
-### Highest Profit Margin Markets:
+When that number appeared for the first time on a properly built dashboard — placed alongside every other market, ranked cleanly from top to bottom — the reaction in the room was something close to disbelief. Not because people suspected Bengaluru was struggling. But because nobody had ever seen the number before. It had been buried inside aggregate regional figures, averaged away, diluted by the weight of Delhi NCR's enormous revenue contribution.
 
-| Market | Profit Margin % |
-| ------ | --------------- |
-| Surat  | 4.9%            |
-| Patna  | 4.1%            |
-
-### Lowest Profit Margin Markets:
-
-| Market    | Profit Margin % |
-| --------- | --------------- |
-| Kanpur    | –0.5%           |
-| Bengaluru | –20.8%          |
-
-This completely changed the business narrative.
-
-The largest markets were not the most efficient markets.
-
-In fact:
-
-* high-revenue markets operated at weak margins,
-* while smaller markets generated healthier returns.
-
-This is a classic case of:
-
-# 📌 Revenue ≠ Profitability
-
-The organization was prioritizing scale while overlooking efficiency.
+The dashboard didn't discover the problem. The problem had always existed. The dashboard just made it impossible to unsee.
 
 ---
 
-# 🏪 The Customer Concentration Risk
+# 🏢 The Customer Who Held Everything Together — and Why That Was the Problem
 
-The customer analysis revealed another structural dependency.
+There was one customer name that appeared at the top of every revenue list, every period, without exception.
 
-### Electricalsara Stores generated:
+## 📌 Electricalsara Stores — ₹413 million
 
-* **₹413M Revenue**
-* **41.97% of total business revenue**
+### *(41.97% of total revenue)*
 
-Nearly half the business depended on a single customer.
+In a sales organisation, that kind of customer is treated like royalty. Relationships are managed at the most senior level. Pricing conversations are handled delicately. Nobody wants to be the person who upset the account that keeps the lights on.
 
-However:
+But the dashboard asked a different question about Electricalsara Stores. Not *how much do they buy*, but *how much do we make from what they buy*.
 
-### Profit Margin:
+The answer:
 
-* Only **2.3%**
+## ⚠️ Profit Margin: **2.3%**
 
-This meant the organization was heavily dependent on a customer delivering volume — but limited profitability.
+The same margin as dozens of smaller accounts who received far less attention and far less commercial flexibility. The business's single largest customer — the one relationship that everything else was built around — was generating the same return per rupee as accounts a tenth of its size.
 
-Meanwhile, smaller customers generated significantly stronger margins:
+And somewhere near the bottom of the same customer table, mostly overlooked, was a company called **Leader**.
 
-| Customer           | Profit Margin % |
-| ------------------ | --------------- |
-| Leader             | 7.5%            |
-| Nixon              | 4.1%            |
-| Electricalslytical | 3.4%            |
+* ₹17 million in revenue
+* Unremarkable scale
+* But a **7.5% profit margin** — the highest of any account in the entire portfolio
 
-The analysis revealed that:
+Nobody had a quarterly review about Leader. Nobody flew out to strengthen that relationship. Nobody asked what made that account work so well, and whether the model could be replicated.
 
-* smaller accounts were operationally healthier,
-* yet received far less strategic focus.
-
-The dashboard transformed these hidden patterns into visible business risks.
+That is what happens when organisations optimise for revenue instead of value.
 
 ---
 
-# 📈 The Revenue Decline Signal
+# 📈 What the Trend Line Was Trying to Say
 
-The Revenue Trend Analysis uncovered another critical insight.
+Data doesn't shout. It doesn't send urgent emails or book emergency meetings. It just sits there, accumulating, patiently recording what is happening while the people around it stay focused on what happened last quarter.
 
-Revenue peaked around mid-2018 at approximately:
+The Revenue Trend chart had been trying to say something for eighteen months before this dashboard was built.
 
-# 📊 ₹40M Monthly Revenue
+The peak was around **mid-2018** — monthly revenue approaching **₹40 million**. Strong. Growing. The kind of number that breeds confidence.
 
-By early 2020, monthly revenue had declined to nearly:
+Then it started to fall.
 
-# 📉 ₹10M–₹15M per month
+Not sharply. Not in a single catastrophic month. Just gradually, quarter after quarter, the line trending downward. By early 2020, monthly revenue had compressed to somewhere between **₹10 and ₹15 million**. The first half of 2020 generated **₹142 million in total revenue** against a **₹2.1 million profit margin**.
 
-This represented:
-
-# ⚠️ More than 60% decline from peak performance
-
-The decline was not seasonal.
-
-It was sustained.
-
-The trend suggested:
-
-* weakening demand,
-* competitive pressure,
-* market saturation,
-* or declining channel efficiency.
-
-The dashboard became an early-warning system for business deterioration.
+The trend chart wasn't predicting a problem. It was documenting one that had already been developing for nearly two years. The dashboard surfaced the full arc of it for the first time — and the prior year revenue overlay made the year-on-year deterioration undeniable, month by month, no interpretation required.
 
 ---
 
-# 🚨 Chapter 3: The 2020 Crisis Analysis
+# 🌆 The Markets Nobody Talked About
 
-The 2020 Performance Analysis page functioned as a business diagnostic layer.
+In every large organisation, there are places that exist at the edge of strategic conversation. They're not glamorous. They don't generate headline revenue numbers. They don't come up in board presentations.
 
-For Jan–Jun 2020:
+But sometimes, those places are where the business actually works.
 
-* Revenue: **₹142M**
-* Quantity Sold: **350K Units**
-* Profit Margin: **₹2.1M**
+### 📍 Surat
 
-The organization introduced a:
+* Barely a quarter of a percent of total revenue
+* But a **4.9% profit margin** — the highest in the network
 
-# 🎯 2% Profit Target Benchmark
+### 📍 Patna
 
-Several customers fell below even this minimum viability threshold:
+* 0.45% revenue contribution
+* **4.1% margin**
 
-| Customer                | Profit Margin % |
-| ----------------------- | --------------- |
-| Electricalsquipo Stores | –11.5%          |
-| Epic Stores             | –4.7%           |
-| Expression              | –4.2%           |
-| Insight                 | –1.9%           |
+### 📍 Bhubaneshwar
 
-Meanwhile:
+* Almost invisible in revenue terms
+* **4.0% margin**
+* And in 2020, it climbed to **10.5%**, leading every market in the country
 
-* Delhi NCR margin dropped to just **0.6%**
-* Bengaluru continued operating at severe losses
-
-The year-over-year comparison showed:
-
-# ❌ No month in 2020 outperformed the prior year
-
-The business slowdown was systemic.
+These markets were running lean. Lower cost-to-serve, tighter operations, pricing discipline that the larger markets had gradually negotiated away. Nobody studied them. Nobody asked what they were doing differently. They just kept quietly generating returns while the organisation's attention stayed fixed on Delhi NCR — running at 2.3%.
 
 ---
 
-# 🛒 Chapter 4: The Channel Shift Question
+# 🧠 What a Dashboard Actually Does
 
-The customer type analysis surfaced a strategic transformation challenge.
+It's easy to describe this project in technical terms.
 
-### Revenue Distribution:
+* Power BI
+* DAX measures
+* Star schema
+* Power Query transformations
+* A What-If parameter for dynamic profit targets
 
-* Brick & Mortar: **₹745M (75.6%)**
-* E-Commerce: **₹240M (24.4%)**
+All of that is real, and all of it matters.
 
-The business remained overwhelmingly dependent on physical retail.
+But the technology was never the point.
 
-But consumer behavior was evolving rapidly toward digital channels.
+The point was a room full of people looking at a screen and seeing — perhaps for the first time — that the business they thought they understood looked quite different when the numbers were assembled honestly and completely.
 
-The dashboard raised a critical strategic question:
+A dashboard doesn't fix a –20.8% margin in Bengaluru. It doesn't renegotiate the Electricalsara Stores contract. It doesn't rebuild the E-Commerce channel or arrest a two-year revenue decline.
 
-> Is over-dependence on Brick & Mortar accelerating revenue decline?
+People do those things.
 
-The analysis strongly suggested the organization needed stronger digital expansion.
+But people can only do those things when they know what they're looking at. And for a long time, nobody knew. Not because the data didn't exist — it did, scattered across transaction systems and regional spreadsheets and monthly reports that arrived too late and aggregated too much.
 
----
+They didn't know because nobody had put it together yet.
 
-# 💡 Chapter 5: Strategic Recommendations
-
-## 🚀 1. Reduce Delhi NCR Dependency
-
-The business must diversify revenue concentration toward:
-
-* Mumbai
-* Ahmedabad
-* Bhopal
-
-These markets demonstrated healthier operational potential.
+## 🚀 Until now.
 
 ---
 
-## 💼 2. Re-negotiate the Electricalsara Relationship
-
-A customer contributing 42% of revenue at only 2.3% margin creates significant business risk.
-
-The organization should:
-
-* improve pricing strategy,
-* rebalance customer portfolio,
-* or optimize operational costs.
+> *This dashboard was built to make the truth visible. What happens next is a leadership decision.*
 
 ---
 
-## 🛑 3. Reassess Bengaluru Operations
+### 📊 Sales Insight Power BI Project
 
-A:
-
-# ❌ –20.8% margin
-
-is not a temporary fluctuation.
-
-It signals structural inefficiency.
-
-The market requires immediate operational restructuring or strategic exit consideration.
-
----
-
-## 🌐 4. Expand E-Commerce Aggressively
-
-At only:
-
-# 📦 24.4% Revenue Contribution
-
-E-Commerce remains underdeveloped.
-
-Future growth depends heavily on:
-
-* digital channel expansion,
-* online customer acquisition,
-* and channel diversification.
-
----
-
-# 🎯 Epilogue: What Good Data Actually Does
-
-This dashboard did not create new facts.
-
-The data always existed.
-
-* Delhi NCR was always 52.76% of revenue
-* Electricalsara always dominated customer contribution
-* Bengaluru was always loss-making
-* Revenue decline was already happening
-
-But the business could not *see* the full picture.
-
-That is the true value of business intelligence.
-
-> Good analytics does not invent insight.
-> It makes reality impossible to ignore.
-
-The numbers were always there.
-
-This dashboard finally gave them meaning.
-
----
-
-*Prepared as part of the Sales Intelligence Power BI Portfolio Project*
-*Analysis Period: June 2017 – June 2020*
+#### *Data period: June 2017 – June 2020*

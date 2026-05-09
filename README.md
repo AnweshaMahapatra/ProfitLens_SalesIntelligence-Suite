@@ -1,160 +1,225 @@
 # 📊 Sales Insight: Revenue, Profit & Performance Intelligence Dashboard
 
-> *A multi-page Power BI solution built to uncover hidden profitability gaps, market concentration risks, and channel performance trends across a distributed sales network in India.*
+> *A premium multi-page Power BI solution built to uncover hidden profitability gaps, customer dependency risks, and revenue decline patterns across a large-scale sales network in India.*
 
 ---
 
-## Overview
+# 🚀 Overview
 
-This project delivers a production-grade business intelligence dashboard built in Power BI Desktop, analysing **₹985M in revenue** across **14 Indian markets**, **25+ customers**, and a **3-year sales timeline (2017–2020)**. The solution spans three analytical layers — Key Insights, Profit Analysis, and Performance Analysis — giving leadership a single source of truth for revenue tracking, margin diagnostics, and customer profitability scoring.
+This project delivers a business intelligence solution built using **Power BI, SQL, Power Query, and DAX**, analysing over **₹985M in revenue**, **2M+ sales quantity**, **14 Indian markets**, and **25+ customers** across a **3-year sales timeline (2017–2020)**.
 
-The dashboard moves beyond surface-level reporting. It exposes the uncomfortable reality that while top-line revenue looks healthy, **total profit margin stands at just ₹24.7M (roughly 2.5%)**, and two markets are actively destroying value.
+The dashboard was designed not just to track revenue — but to answer deeper business questions:
 
----
+* Which markets actually generate profit?
+* Which customers drive revenue but reduce margin quality?
+* Where is the business over-dependent?
+* Why did revenue begin declining after 2018?
+* Which markets are silently destroying value?
 
-## Business Context
+The final solution combines:
 
-The organisation operates a large wholesale distribution network across India, selling through both Brick & Mortar retail chains and E-Commerce channels. As the business scaled geographically, leadership lost visibility into *where* profit was actually being made — and *where* it was being eroded.
+* Revenue Intelligence
+* Profitability Analysis
+* Performance Diagnostics
+* Executive Storytelling
+* Strategic Business Insights
 
-Revenue data existed in transactional systems, but no consolidated view connected market performance, customer profitability, and channel mix. Decisions were being made on gut feel, regional anecdotes, and lagging monthly reports that arrived too late to act on.
-
-This dashboard was built to change that.
-
----
-
-## Project Objectives
-
-- Identify which markets drive revenue versus which drive *profit* — these are not the same markets
-- Surface customers with high revenue contribution but dangerously low (or negative) profit margins
-- Quantify the revenue dependency risk created by a single dominant customer
-- Track revenue trend deterioration over 2019–2020 and isolate the inflection point
-- Enable management to set and monitor profit margin targets dynamically (2% baseline target)
-- Provide a channel-level view of Brick & Mortar vs E-Commerce revenue split
+into one centralized analytics experience.
 
 ---
 
-## Dashboard Capabilities
+# 🏢 Business Context
 
-**Key Insights Page**
-- Total revenue (₹985M) and total sales quantity (2M units) at a glance
-- Revenue and quantity breakdown by all 14 markets — ranked and sortable
-- Revenue trend line from Jan 2018 to Jun 2020, revealing a sustained decline from peak ₹40M/month
-- Customer type split: Brick & Mortar (₹745M, 75.6%) vs E-Commerce (₹240M, 24.4%)
-- Top customers and top product codes by revenue contribution
+The organisation operates a large wholesale distribution network across India through both **Brick & Mortar** and **E-Commerce** channels.
 
-**Profit Analysis Page**
-- Three parallel market rankings: Revenue Contribution %, Profit Margin Contribution %, and Profit Margin %
-- Full customer profitability table: revenue, revenue contribution %, profit margin contribution %, and margin %
-- Instant identification of loss-making markets (Bengaluru: –20.8%, Kanpur: –0.5%)
-- Identification of high-margin but low-revenue accounts (Leader: 7.5% margin on ₹17M)
+Although revenue remained strong on paper, leadership lacked visibility into:
 
-**Performance Analysis Page**
-- Filtered view for 2020 (Jan–Jun) against a user-adjustable Profit Target (default: 2%)
-- Combined Revenue Trend chart overlaying: current revenue, prior year revenue, and profit margin %
-- 2020-specific market margin rankings highlighting structural shifts post-2019
-- Identification of customers turning loss-making in 2020 (Epic Stores: –4.7%, Electricalsquipo: –11.5%)
+* market-level profitability,
+* customer margin contribution,
+* declining revenue trends,
+* and operational inefficiencies hidden inside aggregate reports.
+
+The data existed across transactional systems and spreadsheets — but there was no unified intelligence layer capable of transforming raw sales data into actionable business insights.
+
+This project was built to solve that problem.
 
 ---
 
-## Analytics & Data Modeling Approach
+# 🎯 Project Objectives
 
-**Data Cleaning & Power Query**
-- Standardised market names and customer name fields across source tables
-- Removed or flagged blank/null product codes (visible as "(Blank)" category contributing ₹0.47bn — a data quality issue surfaced and tracked)
-- Handled currency formatting consistently across INR values at different scales (M, bn)
-- Date table created to enable year and month-level filtering via slicers
-
-**DAX Measures**
-- `Revenue` — SUM of transaction-level sales amounts
-- `Sales Qty` — SUM of units sold
-- `Total Profit Margin` — calculated from cost and revenue fields
-- `Profit Margin %` — `DIVIDE([Profit], [Revenue], 0)` to avoid division-by-zero errors
-- `Revenue Contribution %` — market/customer revenue as a share of total, using `ALL()` for denominator
-- `Profit Margin Contribution %` — profit share relative to total profit pool
-- `Revenue LY` — prior year revenue using `SAMEPERIODLASTYEAR()` for YoY comparison in Performance page
-- Dynamic Profit Target parameter — implemented as a What-If parameter enabling threshold-based filtering
-
-**Data Model**
-- Star schema: central fact table (transactions) linked to dimension tables for customers, markets, products, and dates
-- Relationships enforced on market codes and customer IDs to prevent fan-trap aggregation errors
-
-**Visualization Approach**
-- Horizontal bar charts for ranked market/customer comparisons — avoids misleading pie chart distortions
-- Area/line combo chart for revenue trend — overlays margin % on a secondary axis for correlation reading
-- Donut chart for channel mix — appropriate for two-segment proportional comparison
-- Consistent purple/indigo brand palette throughout with white card backgrounds for visual hierarchy
-- Navigation buttons on home page for multi-page drill-through experience
+✔ Identify high-revenue but low-profit markets
+✔ Detect customer concentration risks
+✔ Analyse declining revenue trends from 2018–2020
+✔ Compare Revenue vs Profit Contribution by market
+✔ Identify loss-making customers and regions
+✔ Evaluate Brick & Mortar vs E-Commerce performance
+✔ Build dynamic profitability tracking for leadership teams
 
 ---
 
-## Key Business Highlights
+# ⚙️ Project Workflow
 
-- **Delhi NCR dominates everything**: 52.76% of revenue, 48.5% of profit contribution — but only a 2.3% margin, flagging scale without efficiency
-- **Bengaluru is a value destroyer**: –20.8% profit margin — every rupee of revenue generated there costs more than it earns
-- **Electricalsara Stores is a concentration risk**: ₹413M revenue (41.97% of total) but only 2.3% profit margin — the business's largest customer is also one of its least profitable
-- **Revenue has been declining since mid-2018**: The trend chart shows a clear peak around ₹40M/month followed by a sustained downward trajectory into 2020
-- **Surat leads all markets on margin efficiency**: 4.9% profit margin despite contributing only 0.26% of revenue — a model worth studying for scalability
-- **E-Commerce is underdeveloped**: At 24.4% of revenue (₹240M), the digital channel has significant headroom relative to Brick & Mortar
+| Step                     | Process                                                                             |
+| ------------------------ | ----------------------------------------------------------------------------------- |
+| 📌 Data Extraction       | Pulled transactional sales data using SQL queries                                   |
+| 🧹 Data Cleaning         | Cleaned nulls, standardized currency values, validated data types using Power Query |
+| 🏗 Data Modeling         | Built relationships across customers, products, markets, and date tables            |
+| 📊 KPI Development       | Created DAX measures for Revenue, Profit Margin %, Contribution %, YoY analysis     |
+| 📈 Dashboard Design      | Designed multi-page interactive dashboards with drill-through insights              |
+| 🎯 Performance Analysis  | Added dynamic profit target tracking and year-over-year diagnostics                 |
+| 📖 Business Storytelling | Converted raw metrics into executive-level business narratives and recommendations  |
 
 ---
 
-## Repository Structure
+# 🧠 Dashboard Pages
 
-```
+| Dashboard Page          | Purpose                                                                 |
+| ----------------------- | ----------------------------------------------------------------------- |
+| 📌 Key Insights         | Revenue overview, quantity trends, customer/channel analysis            |
+| 💰 Profit Analysis      | Margin diagnostics, profitability inversion, customer profitability     |
+| 📉 Performance Analysis | 2020 business decline analysis, target monitoring, loss-maker detection |
+
+---
+
+# 🔍 Dashboard Capabilities
+
+### 📊 Key Insights
+
+* Revenue & Sales Quantity Overview
+* Revenue Trend Analysis (2018–2020)
+* Revenue by Market
+* Revenue by Customer
+* Revenue by Product
+* Customer Type Split (Brick & Mortar vs E-Commerce)
+
+### 💰 Profit Analysis
+
+* Revenue Contribution vs Profit Contribution
+* Profit Margin % by Market
+* Customer Profitability Matrix
+* Hidden Loss-Making Market Detection
+* Margin Efficiency Analysis
+
+### 📉 Performance Analysis
+
+* Revenue vs Revenue LY Trend
+* Dynamic Profit Target Analysis
+* 2020 Customer Loss-Maker Identification
+* Market Performance Comparison
+* Margin Deterioration Tracking
+
+---
+
+# 🚨 Key Business Highlights
+
+### ⚠️ Revenue Concentration Risk
+
+Delhi NCR alone contributes **52.76% of total revenue**, creating major dependency on a single market.
+
+### ⚠️ Bengaluru Destroying Value
+
+Bengaluru operates at a **–20.8% profit margin**, meaning the market costs more to serve than it generates.
+
+### ⚠️ Largest Customer ≠ Most Valuable Customer
+
+Electricalsara Stores contributes **41.97% of revenue**, but only delivers a **2.3% margin**.
+
+### 📉 Revenue Decline Since 2018
+
+Monthly revenue declined from nearly **₹40M/month** to **₹10–15M/month** by early 2020.
+
+### 📈 Hidden High-Performing Markets
+
+Smaller cities like Surat and Patna generated significantly higher profit margins despite low revenue contribution.
+
+### 🛒 E-Commerce Opportunity
+
+E-Commerce contributes only **24.4% of revenue**, highlighting strong future growth potential.
+
+---
+
+# 🛠 Tools & Technologies
+
+| Tool               | Purpose                               |
+| ------------------ | ------------------------------------- |
+| Power BI Desktop   | Dashboard Development & Visualization |
+| Power Query        | Data Cleaning & Transformation        |
+| DAX                | KPI & Business Logic Development      |
+| SQL                | Data Extraction & Analysis            |
+| MySQL / SQL Server | Database Layer                        |
+| GitHub             | Portfolio Hosting & Version Control   |
+
+---
+
+# 📂 Repository Structure
+
+```bash
 sales-insight-powerbi/
 │
-├── README.md                              ← You are here
-├── The Story Behind the Dashboard.md     ← Consulting narrative & executive analysis
-├── Business_Questions_and_Insights.md    ← 10 strategic Q&A derived from dashboard
-├── SQL_Queries_Behind_the_Insights.md    ← SQL logic that powered the dashboard metrics
+├── README.md
+├── Steps_Followed.md
+├── SQL_and_DAX_Reference.md
+├── The Story Behind the Dashboard.md
+├── Business_Questions_and_Insights.md
 │
 ├── dashboard/
-│   └── Sales_Insight_Report.pbix         ← Power BI source file
+│   └── Sales_Insight_Report.pbix
 │
-├── exports/
-│   └── Sales_insight_project_report.pdf  ← Dashboard PDF export (this file)
+├── data/
+│   ├── sales_transactions.csv
+│   ├── markets.csv
+│   ├── customers.csv
+│   └── products.csv
 │
-└── assets/
-    └── screenshots/                       ← Dashboard page screenshots
+└── exports/
+    └── Sales_Insight_Project_Report.pdf
 ```
 
 ---
 
-## Additional Project Resources
+# 📚 Project Resources
 
-- **[The Story Behind the Dashboard.md]** — A consulting-style narrative that walks through the business problem, what the data reveals, and strategic recommendations for leadership. Written for executive audiences.
-- **[SQL_Queries_Behind_the_Insights.md]** — The actual SQL logic used to extract, aggregate, and shape the data that feeds this dashboard, with business interpretation for each query.
-
----
-
-## Tools & Technologies
-
-| Tool | Purpose |
-|---|---|
-| Power BI Desktop | Dashboard development, DAX, data modeling |
-| Power Query (M) | Data transformation and cleaning |
-| DAX | KPI measures, YoY calculations, contribution % |
-| SQL | Source data extraction and pre-aggregation |
-| Microsoft Excel / CSV | Raw data staging |
-| GitHub | Portfolio hosting and version control |
+| File                                 | Description                                             |
+| ------------------------------------ | ------------------------------------------------------- |
+| `Steps_Followed.md`                  | End-to-end technical workflow from SQL to Power BI      |
+| `SQL_and_DAX_Reference.md`           | SQL queries and DAX measures with business explanations |
+| `The Story Behind the Dashboard.md`  | Executive storytelling & business narrative             |
+| `Business_Questions_and_Insights.md` | Strategic stakeholder-level business analysis           |
 
 ---
 
-## Conclusion
+# 🎯 Conclusion
 
-This project demonstrates that business intelligence is not about building dashboards — it's about changing decisions. The Sales Insight report took a business sitting on ₹985M in revenue and revealed that net profit was a thin ₹24.7M, that its largest customer was also one of its least profitable, and that two markets were actively destroying value while leadership continued investing in them.
+This project demonstrates how business intelligence can uncover operational truths hidden beneath strong revenue numbers.
 
-That is what good BI looks like.
+What initially appeared to be a successful ₹985M business revealed:
+
+* weak overall profitability,
+* overdependence on one customer,
+* declining revenue momentum,
+* and markets actively reducing enterprise value.
+
+The dashboard transformed disconnected transactional data into:
+
+* strategic visibility,
+* profitability intelligence,
+* and data-driven decision-making.
+
+This is not just a reporting dashboard.
+
+It is a business diagnostic system.
 
 ---
 
-## Author
+# 👩‍💻 Author
 
-**[Your Name]**
-Data Analyst | Business Intelligence Developer | Power BI Specialist
+**Anwesha Mahapatra**
+Data Analyst | Power BI Developer | Business Intelligence Enthusiast
 
-- 🔗 LinkedIn: [linkedin.com/in/yourprofile]
-- 💻 GitHub: [github.com/yourusername]
-- 📧 Email: [your.email@domain.com]
+* 💼 LinkedIn: *Add your LinkedIn link*
+* 💻 GitHub: *Add your GitHub profile*
+* 📧 Email: *Add your email*
 
-*Open to data analyst, BI developer, and analytics consultant roles.*
+---
+
+> *Turning raw business data into strategic business decisions through analytics, storytelling, and visualization.*

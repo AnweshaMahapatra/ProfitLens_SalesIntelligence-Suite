@@ -1,14 +1,14 @@
 # Business Questions & Insights
 
-## *Stakeholder Review Analysis — Sales Insight Dashboard*
+## *Stakeholder Review Analysis Sales Insight Dashboard*
 
-*10 strategic business questions a leadership team, stakeholder, or hiring manager would naturally ask while reviewing the dashboard — answered through data-driven analysis and business interpretation.*
+*10 strategic business questions a leadership team, stakeholder, or hiring manager would naturally ask while reviewing the dashboard, answered through data-driven analysis and business interpretation.*
 
 ---
 
-# 📌 Q1. Delhi NCR generates over half our revenue. Is that a strength or a hidden business risk?
+# 📌 Q1. Delhi NCR generates over half of our revenue. Is that a strength or a hidden business risk?
 
-### **Answer: It looks like strength on the surface — but operationally, it is a major concentration risk.**
+### **Answer: It looks like strength on the surface, but operationally, it is a major concentration risk.**
 
 Delhi NCR contributes:
 
@@ -35,7 +35,7 @@ If Delhi NCR experiences:
 * competitive pressure,
 * or customer loss,
 
-the impact would immediately affect the entire organization.
+The impact would immediately affect the entire organization.
 
 A healthy revenue mix rarely allows one market to exceed 25–30% contribution.
 
@@ -78,13 +78,13 @@ These smaller accounts are significantly more efficient.
 
 This creates a dangerous imbalance:
 
-* the company prioritizes volume,
+* The company prioritizes volume,
 * while profitability remains concentrated elsewhere.
 
 If Electricalsara reduces orders, renegotiates aggressively, or exits entirely, the financial shock would be severe.
 
 This is not just customer concentration.
-It is business dependency.
+It is a business dependency.
 
 ---
 
@@ -107,7 +107,7 @@ Even more concerning:
 So the business is:
 
 * losing money,
-* at very low scale.
+* at a very low scale.
 
 That combination is operationally indefensible.
 
@@ -115,7 +115,7 @@ Kanpur also shows:
 
 * **–0.5% margin**
 
-but Bengaluru requires immediate intervention.
+But Bengaluru requires immediate intervention.
 
 At this stage, leadership should ask:
 
@@ -165,7 +165,7 @@ Even more concerning:
 
 # ❌ No month in 2020 outperformed the prior year equivalent.
 
-The dashboard acts less like a reporting tool here —
+The dashboard acts less like a reporting tool here
 and more like an early-warning system.
 
 ---
@@ -192,7 +192,7 @@ This suggests:
 
 * better pricing discipline,
 * lower operational cost,
-* or more efficient customer mix.
+* or a more efficient customer mix.
 
 Meanwhile, larger markets operate with weaker efficiency.
 
@@ -200,13 +200,13 @@ The dashboard reveals an important strategic truth:
 
 # 📌 Scale without efficiency creates fragile growth.
 
-The business should investigate what makes these smaller markets operationally healthier — and replicate those practices elsewhere.
+The business should investigate what makes these smaller markets operationally healthier and replicate those practices elsewhere.
 
 ---
 
 # 📌 Q6. Is E-Commerce becoming a missed opportunity?
 
-### **Answer: Yes — and the dashboard strongly hints at future channel risk.**
+### **Answer: Yes, and the dashboard strongly hints at future channel risk.**
 
 Revenue contribution by channel:
 
@@ -218,18 +218,18 @@ The organization remains overwhelmingly dependent on physical retail.
 But there’s a strategic contradiction:
 
 * while digital commerce adoption globally accelerated,
-* this business remained heavily tied to offline channels.
+* This business remained heavily tied to offline channels.
 
 At the same time:
 
-* overall revenue was declining from 2018 onward.
+* Overall revenue was declining from 2018 onward.
 
 This raises a critical strategic question:
 
 > Is insufficient E-Commerce investment contributing to long-term revenue decline?
 
-The dashboard cannot fully answer this yet —
-but it clearly signals where leadership should investigate next.
+The dashboard cannot fully answer this yet
+But it clearly signals where leadership should investigate next.
 
 ---
 
@@ -237,7 +237,7 @@ but it clearly signals where leadership should investigate next.
 
 ### **Answer: Several customer accounts shifted from weak profitability into outright losses.**
 
-The 2020 Performance Analysis revealed severe deterioration in customers such as:
+The 2020 Performance Analysis revealed severe deterioration in customers, such as:
 
 | Customer                | 2020 Profit Margin % |
 | ----------------------- | -------------------- |
@@ -248,7 +248,7 @@ The 2020 Performance Analysis revealed severe deterioration in customers such as
 
 What makes this insight important is that:
 
-* some of these customers were not structurally loss-making previously.
+* Some of these customers were not structurally loss-making previously.
 
 For example:
 
@@ -261,7 +261,7 @@ This suggests:
 * operational cost inflation,
 * or changing customer purchasing behavior.
 
-The dashboard enables leadership to identify deterioration early — before customer relationships become permanently unprofitable.
+The dashboard enables leadership to identify deterioration early, before customer relationships become permanently unprofitable.
 
 ---
 
@@ -287,16 +287,16 @@ Without proper product attribution:
 * Promotion ROI analysis becomes impossible
 * Inventory optimization suffers
 
-The organization cannot build strong product strategy while half the revenue lacks valid classification.
+The organization cannot build a strong product strategy while half the revenue lacks a valid classification.
 
-This dashboard uncovered not only business problems —
+This dashboard uncovered not only business problems
 but also reporting system weaknesses.
 
 ---
 
 # 📌 Q9. Which customers deserve long-term strategic investment?
 
-### **Answer: Leader, Nixon, and Electricalslytical demonstrate the healthiest balance between scale and profitability.**
+### **Answer: Leader, Nixon, and Electrical demonstrate the healthiest balance between scale and profitability.**
 
 These customers combine:
 
@@ -314,7 +314,7 @@ These customers combine:
 
 Unlike low-margin high-volume accounts, these customers generate healthier returns per rupee earned.
 
-The strategic opportunity here is not simply increasing sales —
+The strategic opportunity here is not simply increasing sales
 but scaling efficient revenue.
 
 These accounts represent the kind of customer portfolio the business should intentionally grow.
@@ -371,7 +371,7 @@ These two interventions alone could materially improve profitability within the 
 
 # 🎯 Final Insight
 
-The dashboard ultimately reveals a business that appears strong at the revenue level —
+The dashboard ultimately reveals a business that appears strong at the revenue level
 but fragile beneath the surface.
 
 It uncovers:
@@ -382,7 +382,7 @@ It uncovers:
 * declining growth trends,
 * and operational inefficiencies.
 
-Most importantly, it transforms raw numbers into business conversations leadership can no longer avoid.
+Most importantly, it transforms raw numbers into business conversations that leadership can no longer avoid.
 
 ---
 

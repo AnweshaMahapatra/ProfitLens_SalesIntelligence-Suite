@@ -190,21 +190,31 @@ making the profit target threshold dynamic and adjustable.
 ## Step 5: Report Pages Built
 
 **Page 1 — Key Insights**
-A high-level operational overview. Displays total revenue (₹985M), sales quantity (2M), 
-revenue and quantity rankings by market, revenue trend from 2018–2020, customer type split (Brick & Mortar vs E-Commerce), 
-top customers by revenue, and top product codes. Designed for quick scanning by any stakeholder.
+
+1. A high-level operational overview. Displays total revenue (₹985M), sales quantity (2M).
+   
+2. Revenue and quantity rankings by market, revenue trend from 2018–2020, customer type split (Brick & Mortar vs E-Commerce),
+    
+3. Top customers by revenue, and top product codes. Designed for quick scanning by any stakeholder.
 
 **Page 2 — Profit Analysis**
-The financial diagnostic layer. Shows three parallel market rankings.
-Revenue Contribution %, Profit Margin Contribution %, and Profit Margin % side by side so the inversion between revenue size and margin efficiency is immediately visible. 
-Includes the full customer profitability table with all four metrics per account. 
-Total Profit Margin KPI card (₹24.7M) added as a third headline figure alongside Revenue and Sales Qty.
+
+1. The financial diagnostic layer. Shows three parallel market rankings.
+   
+2. Revenue Contribution %, Profit Margin Contribution %, and Profit Margin % side by side so the inversion between revenue size      and margin efficiency is immediately visible.
+    
+3. Includes the full customer profitability table with all four metrics per account.
+    
+4. Total Profit Margin KPI card (₹24.7M) added as a third headline figure alongside Revenue and Sales Qty.
 
 **Page 3 — Performance Analysis**
-A time-filtered diagnostic for 2020. Includes a dynamic Profit Target parameter (default 2%), 
-a combined trend chart overlaying current revenue, prior year revenue, 
-and profit margin %, and a 2020-specific customer profitability table. 
-Designed to answer: which markets and customers are above or below the minimum viability threshold right now?
+
+1. A time-filtered diagnostic for 2020. Includes a dynamic Profit Target parameter (default 2%), 
+   a combined trend chart overlaying current revenue and prior year revenue
+   .
+2. profit margin %, and a 2020-specific customer profitability table.
+   
+3. Designed to answer: which markets and customers are above or below the minimum viability threshold right now?
 
 ---
 
